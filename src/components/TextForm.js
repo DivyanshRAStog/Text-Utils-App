@@ -69,6 +69,8 @@ console.log(mytext3);
        props.showAlert("Remove extra lined" ,"success")
   }
 
+
+  
   return (
     <>
       <div  className="container"  style={{color: props.mode==='dark' ?'white':'black'}} >
@@ -92,7 +94,7 @@ console.log(mytext3);
 <p> It will take {text.split(" ").filter((x)=> x!="").length*(0.008)*(60)}  seconds  or {text.split(" ").filter((x)=> x!="").length*(0.008)}  minutes to read the text</p>
 <p> You typed {text.split("").filter((x)=> "~`!@#$%^&*():<>,.?/|+-_=".split("").includes(x)||x.charCodeAt(0)==92||x.charCodeAt(0)==34||x.charCodeAt(0)==39 ).length} specialcharacters</p>
 <h2> Preview</h2>
-<p> {text} </p>
+<p> {text.length>0?text:'Enter text to preview'} </p>
     </div>
   </>
   );

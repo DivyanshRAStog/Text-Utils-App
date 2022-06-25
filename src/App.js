@@ -49,11 +49,10 @@ setTimeout(()=>
 
       <Route exact  path="/" element= { <TextForm showAlert={showAlert} heading="Enter the text to analyze" mode={mode} /> } />
       <Route exact path="/" element= { <Home/>} />   
-        <Route exact  path="/components/About" element= {<About/>} />
+        <Route exact  path="/About" element= {<About mode={mode}/>} />
         </Routes>
       </Router>
     </>
-  
   );
 }
 
