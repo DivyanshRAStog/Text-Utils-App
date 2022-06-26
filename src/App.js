@@ -5,7 +5,6 @@ import './App.css';
  import React,{useState} from 'react'
  import Alert from './components/Alert';
  import About from './components/About';
- import Home from './components/Home'
  import { BrowserRouter as Router, Routes, 
   Route, Redirect,} from "react-router-dom";
 function App() {
@@ -42,13 +41,10 @@ setTimeout(()=>
     <Router>
     <Navbar  title="TextUtils"  mode={mode} toggleMode={toggleMode}> </Navbar>
     <Alert alert={alert}> </Alert>
-      <div className="container my-4" >
-     
+      <div className="container my-4" >  
       </div>
-      <Routes> 
-
+   <Routes> 
       <Route exact  path="/" element= { <TextForm showAlert={showAlert} heading="Enter the text to analyze" mode={mode} /> } />
-      <Route exact path="/" element= { <Home/>} />   
         <Route exact  path="/About" element= {<About mode={mode}/>} />
         </Routes>
       </Router>
